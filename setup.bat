@@ -7,9 +7,9 @@ python --version 3>NUL
 if errorlevel 1 goto errorNoPython
 pip -v>NUL
 if errorlevel 1 goto errorNoPip
+python -m pip install --upgrade -r requirements.txt
 pyinstaller -v>NUL
 if errorlevel 1 goto errorNoPyInstaller
-python -m pip install --upgrade -r requirements.txt
 cls
 python -m main.py
 pause
